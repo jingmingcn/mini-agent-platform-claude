@@ -1,0 +1,3 @@
+{ "component": true, "usingComponents": {
+  "message-list": "/components/message-list/message-list",
+  "file-uploader": "/components/file-uploader/file-uploader" } }

@@ -1,0 +1,10 @@
+<view class="as">
+  <view class="as-item {{item.id === current ? 'on' : ''}} {{layout}}" wx:for="{{agents}}" wx:key="id" data-agent="{{item}}" bindtap="select">
+    <view class="as-avatar">{{item.avatar || '🤖'}}</view>
+    <view class="as-body">
+      <view class="as-name">{{item.name}} <text wx:if="{{item.enable_rag}}" class="badge">知识库</text></view>
+      <view class="as-desc">{{item.description || '—'}}</view>
+    </view>
+  </view>
+  <view wx:if="{{!agents.length}}" class="empty">暂无可用的智能体</view>
+</view>

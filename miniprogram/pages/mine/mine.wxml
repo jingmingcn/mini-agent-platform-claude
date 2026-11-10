@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card profile">
+    <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onAvatar">
+      <image wx:if="{{user.avatar_url}}" class="avatar" src="{{user.avatar_url}}" />
+      <view wx:else class="avatar ph">🙂</view>
+    </button>
+    <view class="info">
+      <input class="nick" type="nickname" value="{{user.nickname}}" placeholder="点击设置昵称" bindblur="onNickname" />
+      <view class="muted">ID {{user.id}}</view>
+    </view>
+  </view>
+  <view class="section-title">近 30 天使用量</view>
+  <view class="stats">
+    <view class="card stat"><view class="num">{{usage.conversations}}</view><view class="muted">会话</view></view>
+    <view class="card stat"><view class="num">{{usage.requests_30d}}</view><view class="muted">提问</view></view>
+    <view class="card stat"><view class="num">{{usage.tokens_30d}}</view><view class="muted">Tokens</view></view>
+  </view>
+  <view class="card menu">
+    <view class="mi" bindtap="clearCache">清除本地登录状态</view>
+  </view>
+</view>

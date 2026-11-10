@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="hero">
+    <view class="hero-title">{{config.platform_name || 'Mini-Agent 智能体平台'}}</view>
+    <view class="hero-sub">{{config.welcome_text || '选择一个智能体开始对话'}}</view>
+  </view>
+
+  <block wx:if="{{featured.length}}">
+    <view class="section-title">推荐智能体</view>
+    <scroll-view scroll-x class="featured" enhanced show-scrollbar="{{false}}">
+      <view class="f-card" wx:for="{{featured}}" wx:key="id" data-agent="{{item}}" bindtap="openAgent">
+        <view class="f-avatar">{{item.avatar || '🤖'}}</view>
+        <view class="f-name ellipsis">{{item.name}}</view>
+        <view class="f-desc">{{item.description || ''}}</view>
+      </view>
+    </scroll-view>
+  </block>
+
+  <view class="section-title" wx:if="{{config.quick_questions.length}}">快捷提问</view>
+  <view class="quick">
+    <view class="q" wx:for="{{config.quick_questions}}" wx:key="index" data-q="{{item}}" bindtap="quickAsk">{{item}}</view>
+  </view>
+
+  <view class="section-title">全部智能体</view>
+  <agent-selector agents="{{agents}}" bind:select="onSelect" />
+
+  <view class="section-title" wx:if="{{recent.length}}">最近会话 <text class="more" bindtap="goHistory">全部 ›</text></view>
+  <chat-history conversations="{{recent}}" deletable="{{false}}" />
+</view>

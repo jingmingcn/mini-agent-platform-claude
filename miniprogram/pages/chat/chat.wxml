@@ -1,0 +1,1 @@
+<agent-chat id="chat" agent-id="{{agentId}}" conversation-id="{{conversationId}}" bind:agent="onAgent" bind:conversation="onConversation" />

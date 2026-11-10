@@ -1,0 +1,10 @@
+<view class="md">
+  <block wx:for="{{blocks}}" wx:key="index">
+    <rich-text wx:if="{{item.type === 'html'}}" nodes="{{item.html}}" user-select="{{true}}"></rich-text>
+    <view wx:else class="code">
+      <view class="code-head"><text>{{item.lang || 'code'}}</text><text class="copy" data-code="{{item.code}}" bindtap="copy">复制</text></view>
+      <scroll-view scroll-x class="code-body"><text user-select decode="{{false}}">{{item.code}}</text></scroll-view>
+    </view>
+  </block>
+  <text wx:if="{{cursor}}" class="cursor">▍</text>
+</view>

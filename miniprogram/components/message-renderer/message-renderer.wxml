@@ -1,0 +1,35 @@
+<!-- Renders one message by type: text / markdown / image / table / card / file / error -->
+<view class="mr">
+  <view wx:if="{{message.attachments.length}}" class="atts">
+    <block wx:for="{{message.attachments}}" wx:key="file_id">
+      <image wx:if="{{item.type === 'image' && item.url}}" class="att-img" src="{{item.url}}" mode="aspectFill" data-url="{{item.url}}" bindtap="preview" />
+      <view wx:else class="att-file">📄 {{item.name}}</view>
+    </block>
+  </view>
+  <block wx:if="{{message.type === 'markdown'}}">
+    <markdown-renderer content="{{message.content}}" cursor="{{message.status === 'streaming'}}" />
+  </block>
+  <block wx:elif="{{message.type === 'image'}}">
+    <image class="img" src="{{message.content}}" mode="widthFix" data-url="{{message.content}}" bindtap="preview" />
+  </block>
+  <block wx:elif="{{message.type === 'table'}}">
+    <scroll-view scroll-x>
+      <view class="tbl">
+        <view class="tr th"><view class="td" wx:for="{{table.columns}}" wx:key="index">{{item}}</view></view>
+        <view class="tr" wx:for="{{table.rows}}" wx:for-item="row" wx:key="index"><view class="td" wx:for="{{row}}" wx:key="index">{{item}}</view></view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{message.type === 'card'}}">
+    <view class="card-msg"><view class="card-title">{{card.title}}</view><view class="muted">{{card.description}}</view></view>
+  </block>
+  <block wx:elif="{{message.type === 'file'}}">
+    <view class="att-file">📄 {{message.content}}</view>
+  </block>
+  <block wx:elif="{{message.type === 'error'}}">
+    <view class="err">⚠️ {{message.content}}</view>
+  </block>
+  <block wx:else>
+    <text user-select class="text">{{message.content}}</text>
+  </block>
+</view>

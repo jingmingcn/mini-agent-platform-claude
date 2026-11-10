@@ -1,0 +1,7 @@
+.md { font-size: 29rpx; line-height: 1.75; word-break: break-word; }
+.code { background: #1e293b; border-radius: 12rpx; margin: 12rpx 0; overflow: hidden; }
+.code-head { display: flex; justify-content: space-between; padding: 10rpx 20rpx; background: #0f172a; color: #94a3b8; font-size: 22rpx; }
+.copy { color: #93c5fd; }
+.code-body { padding: 16rpx 20rpx; color: #e2e8f0; font-family: Menlo, monospace; font-size: 24rpx; white-space: pre; }
+.cursor { color: #3b5bfd; animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }

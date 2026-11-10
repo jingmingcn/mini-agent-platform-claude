@@ -1,0 +1,11 @@
+<view class="ch">
+  <view class="ch-item" wx:for="{{items}}" wx:key="id" data-item="{{item}}" bindtap="open" bindlongpress="more" data-index="{{index}}">
+    <view class="ch-avatar">{{item.agent_avatar || '🤖'}}</view>
+    <view class="ch-body">
+      <view class="ch-title ellipsis">{{item.title}}</view>
+      <view class="ch-meta"><text>{{item.agent_name}}</text><text>{{item.time}}</text></view>
+    </view>
+    <text class="ch-del" data-item="{{item}}" catchtap="remove" wx:if="{{deletable}}">删除</text>
+  </view>
+  <view wx:if="{{!items.length}}" class="empty">{{emptyText}}</view>
+</view>

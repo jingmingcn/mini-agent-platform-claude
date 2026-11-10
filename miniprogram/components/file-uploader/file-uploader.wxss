@@ -1,0 +1,8 @@
+.fu { display: flex; align-items: center; gap: 12rpx; }
+.fu-btn { width: 64rpx; height: 64rpx; border-radius: 50%; background: #f1f3f7; color: #4b5563; font-size: 40rpx; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.fu-list { display: flex; gap: 10rpx; flex-wrap: wrap; }
+.fu-file { position: relative; background: #f1f3f7; border-radius: 10rpx; padding: 6rpx 34rpx 6rpx 10rpx; display: flex; align-items: center; gap: 8rpx; font-size: 22rpx; max-width: 300rpx; }
+.thumb { width: 56rpx; height: 56rpx; border-radius: 6rpx; }
+.fname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.state { color: #8a919f; } .err { color: #dc2626; }
+.rm { position: absolute; right: 8rpx; top: 0; color: #9ca3af; font-size: 30rpx; }

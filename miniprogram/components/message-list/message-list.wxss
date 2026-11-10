@@ -1,0 +1,15 @@
+.list { height: 100%; box-sizing: border-box; padding: 20rpx 24rpx 0; }
+.welcome { text-align: center; padding: 60rpx 30rpx 30rpx; }
+.w-avatar { font-size: 90rpx; }
+.w-name { font-size: 34rpx; font-weight: 700; margin-top: 10rpx; }
+.w-text { color: #6b7280; margin: 14rpx 0 30rpx; line-height: 1.6; }
+.sugs { display: flex; flex-direction: column; gap: 16rpx; align-items: center; }
+.sug { background: #fff; border: 1px solid #e0e7ff; color: #3b5bfd; padding: 16rpx 28rpx; border-radius: 999rpx; font-size: 26rpx; }
+.row { display: flex; margin-bottom: 28rpx; gap: 14rpx; align-items: flex-start; }
+.row.user { justify-content: flex-end; }
+.avatar { width: 64rpx; height: 64rpx; border-radius: 16rpx; background: #eef2ff; display: flex; align-items: center; justify-content: center; font-size: 36rpx; flex-shrink: 0; }
+.bubble { max-width: 82%; padding: 18rpx 24rpx; border-radius: 22rpx; box-sizing: border-box; }
+.bubble.user { background: #3b5bfd; color: #fff; border-top-right-radius: 6rpx; }
+.bubble.assistant { background: #fff; border-top-left-radius: 6rpx; box-shadow: 0 2rpx 8rpx rgba(0,0,0,.04); width: 82%; }
+.tag { font-size: 22rpx; color: #9ca3af; margin-top: 8rpx; }
+.retry { color: #3b5bfd; font-size: 24rpx; margin-top: 10rpx; }

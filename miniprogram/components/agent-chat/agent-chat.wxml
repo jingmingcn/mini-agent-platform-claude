@@ -1,0 +1,14 @@
+<view class="chat">
+  <view class="body">
+    <message-list messages="{{messages}}" agent="{{agent}}" busy="{{busy}}" bind:ask="onAsk" bind:regenerate="regenerate" />
+  </view>
+  <view class="banner" wx:if="{{banner}}">{{banner}}</view>
+  <view class="composer" style="padding-bottom: {{keyboardHeight ? 16 : safeBottom + 16}}px">
+    <file-uploader id="uploader" bind:change="onFiles" />
+    <textarea class="input" value="{{input}}" auto-height maxlength="8000" placeholder="输入你的问题…" confirm-type="send"
+              show-confirm-bar="{{false}}" adjust-position="{{true}}" cursor-spacing="20" disable-default-padding
+              bindinput="onInput" bindconfirm="send" bindkeyboardheightchange="onKeyboard" />
+    <view wx:if="{{busy}}" class="btn stop" bindtap="stop">停止</view>
+    <view wx:else class="btn send {{canSend ? '' : 'disabled'}}" bindtap="send">发送</view>
+  </view>
+</view>

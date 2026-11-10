@@ -1,0 +1,4 @@
+.fb { display: flex; align-items: center; gap: 24rpx; margin-top: 12rpx; font-size: 23rpx; color: #8a919f; }
+.spacer { flex: 1; }
+.act { padding: 4rpx 8rpx; border-radius: 8rpx; }
+.act.on { background: #eef2ff; }

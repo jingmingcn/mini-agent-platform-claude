@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+backend/data/
+backend/.env
+# Node
+node_modules/
+admin/dist/
+admin/.env
+admin/.env.local
+# Mini program
+miniprogram/project.private.config.json
+# OS
+.DS_Store

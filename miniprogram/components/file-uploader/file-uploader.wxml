@@ -1,0 +1,12 @@
+<view class="fu">
+  <view class="fu-btn" bindtap="choose">＋</view>
+  <view class="fu-list" wx:if="{{files.length}}">
+    <view class="fu-file" wx:for="{{files}}" wx:key="localId">
+      <image wx:if="{{item.isImage}}" src="{{item.path}}" class="thumb" mode="aspectFill" />
+      <text wx:else class="fname">📄 {{item.name}}</text>
+      <text class="state" wx:if="{{item.uploading}}">上传中</text>
+      <text class="state err" wx:elif="{{item.error}}">失败</text>
+      <text class="rm" data-i="{{index}}" catchtap="remove">×</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+.ch-item { display: flex; align-items: center; gap: 18rpx; background: #fff; padding: 22rpx 24rpx; border-radius: 18rpx; margin-bottom: 14rpx; }
+.ch-avatar { width: 72rpx; height: 72rpx; border-radius: 18rpx; background: #eef2ff; display: flex; align-items: center; justify-content: center; font-size: 38rpx; flex-shrink: 0; }
+.ch-body { flex: 1; min-width: 0; }
+.ch-title { font-size: 28rpx; font-weight: 500; }
+.ch-meta { display: flex; justify-content: space-between; color: #9ca3af; font-size: 22rpx; margin-top: 6rpx; }
+.ch-del { color: #ef4444; font-size: 24rpx; padding-left: 10rpx; }
+.empty { text-align: center; color: #9ca3af; padding: 60rpx 0; }

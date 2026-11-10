@@ -1,0 +1,11 @@
+.profile { display: flex; align-items: center; gap: 24rpx; }
+.avatar-btn { padding: 0; margin: 0; background: none; width: 120rpx; height: 120rpx; line-height: normal; }
+.avatar-btn::after { border: none; }
+.avatar { width: 120rpx; height: 120rpx; border-radius: 50%; }
+.ph { background: #eef2ff; display: flex; align-items: center; justify-content: center; font-size: 60rpx; }
+.nick { font-size: 34rpx; font-weight: 600; }
+.stats { display: flex; gap: 16rpx; }
+.stat { flex: 1; text-align: center; }
+.num { font-size: 40rpx; font-weight: 700; color: #3b5bfd; }
+.menu { margin-top: 30rpx; }
+.mi { padding: 18rpx 0; }

@@ -1,0 +1,9 @@
+page { background: #f5f7fb; color: #1f2937; font-size: 28rpx; font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif; }
+.container { padding: 24rpx 28rpx; }
+.card { background: #fff; border-radius: 20rpx; padding: 24rpx; box-shadow: 0 2rpx 8rpx rgba(0,0,0,.03); }
+.section-title { font-size: 30rpx; font-weight: 600; margin: 32rpx 0 18rpx; display: flex; justify-content: space-between; align-items: center; }
+.section-title .more { font-size: 24rpx; color: #8a919f; font-weight: normal; }
+.muted { color: #8a919f; font-size: 24rpx; }
+.ellipsis { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.empty { text-align: center; color: #9ca3af; padding: 80rpx 0; }
+.btn-primary { background: #3b5bfd; color: #fff; border-radius: 999rpx; }

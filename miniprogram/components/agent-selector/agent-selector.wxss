@@ -1,0 +1,9 @@
+.as { display: flex; flex-direction: column; gap: 18rpx; }
+.as-item { display: flex; gap: 20rpx; background: #fff; border-radius: 20rpx; padding: 24rpx; align-items: center; border: 2rpx solid transparent; }
+.as-item.on { border-color: #3b5bfd; }
+.as-avatar { width: 84rpx; height: 84rpx; border-radius: 20rpx; background: #eef2ff; font-size: 46rpx; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.as-body { flex: 1; min-width: 0; }
+.as-name { font-weight: 600; font-size: 30rpx; }
+.as-desc { color: #8a919f; font-size: 24rpx; margin-top: 6rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge { font-size: 20rpx; color: #059669; background: #ecfdf5; padding: 2rpx 10rpx; border-radius: 6rpx; margin-left: 8rpx; font-weight: normal; }
+.empty { text-align: center; color: #9ca3af; padding: 60rpx 0; }

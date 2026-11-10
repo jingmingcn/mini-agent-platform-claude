@@ -1,0 +1,17 @@
+<view class="kr" wx:if="{{citations.length}}">
+  <view class="kr-head" bindtap="toggle">
+    <text>📎 引用来源 {{citations.length}}</text><text class="arrow">{{open ? '收起' : '展开'}}</text>
+  </view>
+  <view wx:if="{{open}}">
+    <view class="item" wx:for="{{citations}}" wx:key="chunk_id" data-index="{{index}}" bindtap="toggleItem">
+      <view class="title">
+        <text class="no">{{item.index}}</text>
+        <text class="name ellipsis">{{item.document_name}}</text>
+        <text class="meta" wx:if="{{item.page_number}}">P{{item.page_number}}</text>
+        <text class="meta">{{item.scorePct}}%</text>
+      </view>
+      <view class="kb muted">{{item.knowledge_base_name}}</view>
+      <text class="snippet {{expanded[index] ? 'full' : ''}}" user-select>{{expanded[index] ? item.content : item.snippet}}</text>
+    </view>
+  </view>
+</view>

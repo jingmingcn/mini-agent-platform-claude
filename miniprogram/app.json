@@ -1,0 +1,34 @@
+{
+  "pages": ["pages/index/index", "pages/chat/chat", "pages/history/history", "pages/mine/mine"],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Mini-Agent",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f7fb"
+  },
+  "tabBar": {
+    "color": "#8a919f",
+    "selectedColor": "#3b5bfd",
+    "backgroundColor": "#ffffff",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/history/history", "text": "会话" },
+      { "pagePath": "pages/mine/mine", "text": "我的" }
+    ]
+  },
+  "usingComponents": {
+    "agent-chat": "/components/agent-chat/agent-chat",
+    "message-list": "/components/message-list/message-list",
+    "message-renderer": "/components/message-renderer/message-renderer",
+    "markdown-renderer": "/components/markdown-renderer/markdown-renderer",
+    "agent-selector": "/components/agent-selector/agent-selector",
+    "file-uploader": "/components/file-uploader/file-uploader",
+    "knowledge-result": "/components/knowledge-result/knowledge-result",
+    "feedback-bar": "/components/feedback-bar/feedback-bar",
+    "chat-history": "/components/chat-history/chat-history",
+    "loading-indicator": "/components/loading-indicator/loading-indicator"
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}

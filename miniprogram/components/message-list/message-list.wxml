@@ -1,0 +1,24 @@
+<scroll-view class="list" scroll-y scroll-into-view="{{anchor}}" scroll-with-animation="{{false}}" enhanced show-scrollbar="{{false}}">
+  <view class="welcome" wx:if="{{!messages.length}}">
+    <view class="w-avatar">{{agent.avatar || '🤖'}}</view>
+    <view class="w-name">{{agent.name}}</view>
+    <view class="w-text">{{agent.welcome_message || agent.description || '你好，有什么可以帮你？'}}</view>
+    <view class="sugs">
+      <view class="sug" wx:for="{{agent.suggested_questions}}" wx:key="index" data-q="{{item}}" bindtap="ask">{{item}}</view>
+    </view>
+  </view>
+  <view wx:for="{{messages}}" wx:key="key" id="m{{index}}" class="row {{item.role}}">
+    <view class="avatar" wx:if="{{item.role === 'assistant'}}">{{agent.avatar || '🤖'}}</view>
+    <view class="bubble {{item.role}}">
+      <loading-indicator wx:if="{{item.role === 'assistant' && item.status === 'streaming' && !item.content}}" text="{{item.phase || '思考中'}}" />
+      <message-renderer wx:else message="{{item}}" />
+      <view wx:if="{{item.status === 'interrupted'}}" class="tag">已停止生成</view>
+      <knowledge-result wx:if="{{item.role === 'assistant'}}" items="{{item.citations}}" />
+      <feedback-bar wx:if="{{item.role === 'assistant' && item.id && item.status !== 'streaming' && item.type !== 'error'}}"
+                    message-id="{{item.id}}" content="{{item.content}}" value="{{item.feedback}}"
+                    can-regenerate="{{index === messages.length - 1 && !busy}}" bind:regenerate="onRegenerate" />
+      <view wx:if="{{item.type === 'error' && index === messages.length - 1 && !busy}}" class="retry" bindtap="onRegenerate">重试</view>
+    </view>
+  </view>
+  <view id="bottom" style="height: 20rpx"></view>
+</scroll-view>

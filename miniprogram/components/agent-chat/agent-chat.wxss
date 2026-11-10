@@ -1,0 +1,9 @@
+.chat { display: flex; flex-direction: column; height: 100vh; }
+.body { flex: 1; min-height: 0; }
+.banner { background: #fff7ed; color: #c2410c; font-size: 24rpx; padding: 10rpx 24rpx; }
+.composer { display: flex; align-items: flex-end; gap: 14rpx; padding: 16rpx 20rpx; background: #fff; border-top: 1px solid #eef0f4; }
+.input { flex: 1; min-height: 40rpx; max-height: 240rpx; background: #f5f7fb; border-radius: 20rpx; padding: 16rpx 20rpx; font-size: 28rpx; line-height: 1.5; }
+.btn { padding: 0 28rpx; height: 68rpx; line-height: 68rpx; border-radius: 999rpx; font-size: 26rpx; flex-shrink: 0; }
+.send { background: #3b5bfd; color: #fff; }
+.send.disabled { background: #c7d2fe; }
+.stop { background: #fee2e2; color: #dc2626; }

@@ -1,0 +1,7 @@
+<view class="fb">
+  <text class="act" bindtap="copy">复制</text>
+  <text class="act" wx:if="{{canRegenerate}}" bindtap="regenerate">重新生成</text>
+  <view class="spacer"></view>
+  <text class="act {{value === 1 ? 'on' : ''}}" data-v="{{1}}" bindtap="rate">👍</text>
+  <text class="act {{value === -1 ? 'on' : ''}}" data-v="{{-1}}" bindtap="rate">👎</text>
+</view>

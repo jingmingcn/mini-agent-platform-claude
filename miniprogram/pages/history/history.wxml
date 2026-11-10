@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="filters">
+    <picker range="{{agentNames}}" bindchange="onFilter"><view class="picker">{{agentNames[filterIndex]}} ▾</view></picker>
+  </view>
+  <chat-history conversations="{{list}}" bind:removed="reload" />
+  <view class="muted center" wx:if="{{list.length && list.length >= total}}">— 没有更多了 —</view>
+</view>

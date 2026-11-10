@@ -1,0 +1,5 @@
+{ "component": true, "usingComponents": {
+  "message-renderer": "/components/message-renderer/message-renderer",
+  "knowledge-result": "/components/knowledge-result/knowledge-result",
+  "feedback-bar": "/components/feedback-bar/feedback-bar",
+  "loading-indicator": "/components/loading-indicator/loading-indicator" } }
