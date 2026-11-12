@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base theme; actual colors come from Compose MaterialTheme. This XML theme
+         is only used while the activity window is being created. -->
+    <style name="Theme.MiniAgent" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">?android:attr/colorBackground</item>
+    </style>
+</resources>
